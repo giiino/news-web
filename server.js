@@ -13,7 +13,7 @@ app.get('/getNews', (req, res)=>{
     const fromDate = Today.getFullYear()+'-'+(Today.getMonth()+1).toString().padStart(2, '0')+'-'+(Today.getDate()-3).toString().padStart(2, '0')
     const toDate = Today.getFullYear()+'-'+(Today.getMonth()+1).toString().padStart(2, '0')+'-'+(Today.getDate()).toString().padStart(2, '0')
     request(
-        `https://newsapi.org/v2/everything?q=${req.query.q}&from=${fromDate}&to=${toDate}&apiKey=41c21a62b6d64e2bac349d1adf519e7f`,
+        `https://newsapi.org/v2/everything?q=${req.query.q}&from=${fromDate}&to=${toDate}&apiKey=###`,
         (error, response, body)=>{
             if( !error && response.statusCode == 200){
                 res.send(body);
